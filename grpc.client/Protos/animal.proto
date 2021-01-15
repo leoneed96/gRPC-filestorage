@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "grpc.types";
+
+package types;
+
+service Animal {
+	rpc GetData (AnimalRequest) returns (AnimalResponse);
+}
+
+message AnimalRequest{
+	string title = 1;
+}
+
+message AnimalResponse{
+	int32 weight = 1;
+	string sound = 2;
+}
